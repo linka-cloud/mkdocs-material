@@ -82,7 +82,7 @@
       inset-inline-start: 0;
       width: 0;
       height: 0;
-      background-color: hsla(0, 0%, 0%, 0.54);
+      background-color: hsla(0, 0%, 0%, 0.1);
       cursor: pointer;
       transition:
         width     0ms 250ms,
@@ -200,21 +200,24 @@
     position: relative;
     z-index: 2;
     height: px2rem(48px);
-    background-color: var(--md-default-bg-color);
-    box-shadow: 0 0 px2rem(12px) transparent;
+    //background-color: var(--md-primary-fg-color);
+    border-radius: 0.1rem 0.1rem 0 0;
+    //box-shadow: 0 0 0.6rem rgb(0 0 0 / 7%);
+
+    color: var(--md-default-bg-color);
     transition:
       color            250ms,
       background-color 250ms;
 
     // [tablet landscape +]: Header-embedded search
     @include break-from-device(tablet landscape) {
-      height: px2rem(36px);
-      background-color: hsla(0, 0%, 0%, 0.26);
+      height: px2rem(48px);
+      // background-color: hsla(0, 0%, 0%, 0.26);
       border-radius: px2rem(2px);
 
       // Search form on hover
       &:hover {
-        background-color: hsla(0, 0%, 100%, 0.12);
+        // background-color: hsla(0,0%,100%,.12);
       }
     }
 
@@ -234,19 +237,20 @@
     width: 100%;
     height: 100%;
     padding-inline: px2rem(72px) px2rem(44px);
-    font-size: px2rem(18px);
+    font-size: px2rem(16px);
     text-overflow: ellipsis;
     background: transparent;
+    color: var(--md-primary-fg-color);
 
     // Search placeholder
     &::placeholder {
-      transition: color 250ms;
+      // transition: color 250ms;
     }
 
     // Search icon and placeholder
     ~ .md-search__icon,
     &::placeholder {
-      color: var(--md-default-fg-color--light);
+       color: var(--md-primary-fg-color);
     }
 
     // Remove the "x" rendered by Internet Explorer
@@ -258,7 +262,7 @@
     @include break-to-device(tablet portrait) {
       width: 100%;
       height: px2rem(48px);
-      font-size: px2rem(18px);
+      font-size: px2rem(14px);
     }
 
     // [tablet landscape +]: Header-embedded search
@@ -269,12 +273,12 @@
 
       // Search placeholder
       &::placeholder {
-        color: var(--md-primary-bg-color--light);
+        // color: var(--md-primary-bg-color--light);
       }
 
       // Search icon
       + .md-search__icon {
-        color: var(--md-primary-bg-color);
+        color: var(--md-primary-fg-color);
       }
 
       // Adjust appearance when search is active
@@ -308,7 +312,7 @@
     // Search focus button
     &[for="__search"] {
       position: absolute;
-      top: px2rem(6px);
+      top: px2rem(12px);
       inset-inline-start: px2rem(10px);
       z-index: 2;
 
@@ -343,7 +347,7 @@
   // Search options
   &__options {
     position: absolute;
-    top: px2rem(6px);
+    top: px2rem(12px);
     inset-inline-end: px2rem(10px);
     z-index: 2;
     pointer-events: none;
@@ -395,7 +399,7 @@
     height: 100%;
     padding-inline: px2rem(72px) px2rem(44px);
     color: var(--md-default-fg-color--lighter);
-    font-size: px2rem(18px);
+    font-size: px2rem(14px);
     white-space: nowrap;
     opacity: 0;
     transition: opacity 50ms;
@@ -514,7 +518,7 @@
     padding: 0 px2rem(16px);
     color: var(--md-default-fg-color--light);
     font-size: px2rem(12.8px);
-    line-height: px2rem(36px);
+    line-height: px2rem(48px);
     background-color: var(--md-default-fg-color--lightest);
     scroll-snap-align: start;
 

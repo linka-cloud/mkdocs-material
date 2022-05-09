@@ -46,6 +46,9 @@
     font-weight: 700;
     text-overflow: ellipsis;
 
+    background-color: var(--md-default-bg-color);
+    color: var(--md-primary-fg-color);
+
     // Navigaton button
     .md-nav__button {
       display: none;
@@ -64,7 +67,7 @@
           display: block;
           width: auto;
           max-width: 100%;
-          height: px2rem(48px);
+          height: px2rem(64px);
           object-fit: contain;
           fill: currentcolor;
         }
@@ -77,6 +80,7 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    color: rgba(0,0,0,0.66)
   }
 
   // Navigation item
@@ -194,7 +198,7 @@
         height: px2rem(112px);
         padding: px2rem(60px) px2rem(16px) px2rem(4px);
         color: var(--md-default-fg-color--light);
-        line-height: px2rem(48px);
+        line-height: px2rem(64px);
         white-space: nowrap;
         background-color: var(--md-default-fg-color--lightest);
         cursor: pointer;
@@ -525,8 +529,8 @@
     // Navigation icon
     &__icon {
       float: right;
-      width: px2rem(18px);
-      height: px2rem(18px);
+      width: px2rem(14px);
+      height: px2rem(14px);
       border-radius: 100%;
       transition:
         background-color 250ms,

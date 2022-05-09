@@ -39,7 +39,7 @@
   z-index: 1;
   width: px2em(24px);
   height: px2em(24px);
-  color: var(--md-default-fg-color--lightest);
+  color: rgba(255,255,255,0.5);
   border-radius: px2rem(2px);
   outline-color: var(--md-accent-fg-color);
   outline-offset: px2rem(2px);
@@ -59,7 +59,7 @@
 
   // Darken color on code block hover
   :hover > & {
-    color: var(--md-default-fg-color--light);
+    color: var(--md-primary-fg-color);
   }
 
   // Button on focus/hover
@@ -71,8 +71,8 @@
   // automatically adjusted for nested code blocks (e.g. in admonitions)
   &::after {
     display: block;
-    width: px2em(18px);
-    height: px2em(18px);
+    width: px2em(14px);
+    height: px2em(14px);
     margin: 0 auto;
     background-color: currentcolor;
     mask-image: var(--md-clipboard-icon);
