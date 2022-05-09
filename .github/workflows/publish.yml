@@ -20,9 +20,8 @@
 
 name: publish
 on:
-  release:
-    types:
-      - published
+  push:
+    tags: ["v*"]
 
 env:
   PYTHON_VERSION: 3.x
@@ -33,7 +32,6 @@ permissions:
 jobs:
   publish_pypi:
     name: Build and push Python package
-    if: github.event.repository.fork == false
     runs-on: ubuntu-latest
     steps:
 
@@ -59,7 +57,6 @@ jobs:
 
   publish_docker:
     name: Build and push Docker image
-    if: github.event.repository.fork == false
     runs-on: ubuntu-latest
     steps:
 
@@ -72,32 +69,21 @@ jobs:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
 
-      - name: Login to GitHub Container Registry
-        uses: docker/login-action@v2
-        with:
-          registry: ghcr.io
-          username: ${{ github.repository_owner }}
-          password: ${{ secrets.GHCR_TOKEN }}
-
       - name: Build Docker image
         uses: docker/build-push-action@v3
         with:
           context: .
           # platforms: linux/amd64,linux/arm64
           tags: |
-            ${{ github.event.repository.full_name }}:latest
-            ${{ github.event.repository.full_name }}:${{ github.event.release.tag_name }}
-            ghcr.io/${{ github.event.repository.full_name }}:latest
-            ghcr.io/${{ github.event.repository.full_name }}:${{ github.event.release.tag_name }}
+            linkacloud/mkdocs-material:latest
 
       - name: Check Docker image
         run:
-          docker run --rm -i -v ${PWD}:/docs ${{ github.event.repository.full_name }} build
+          docker run --rm -i -v ${PWD}:/docs linkacloud/mkdocs-material build
 
       - name: Publish Docker image
         env:
           DOCKER_USERNAME: ${{ secrets.DOCKER_HUB_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
         run: |
-          docker push --all-tags ${{ github.event.repository.full_name }}
-          docker push --all-tags ghcr.io/${{ github.event.repository.full_name }}
+          docker push --all-tags linkacloud/mkdocs-material
