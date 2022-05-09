@@ -40,16 +40,12 @@ with open("README.md", encoding = "utf-8") as f:
 setup(
     name = "mkdocs-material",
     version = package["version"],
-    url = package["homepage"],
-    project_urls = {
-        "Source": "https://github.com/squidfunk/mkdocs-material",
-    },
+    url = "https://linka.cloud",
     license = package["license"],
     description = package["description"],
     long_description = long_description,
     long_description_content_type = "text/markdown",
-    author = package["author"]["name"],
-    author_email = package["author"]["email"],
+    author = "linka-cloud",
     keywords = package["keywords"],
     classifiers = [
         "Development Status :: 5 - Production/Stable",
@@ -67,7 +63,7 @@ setup(
     python_requires='>=3.7',
     entry_points = {
         "mkdocs.themes": [
-            "material = material"
+            "linka-cloud = material"
         ],
         "mkdocs.plugins": [
             "search = material.plugins.search.plugin:SearchPlugin",
