@@ -54,8 +54,8 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
         run: npm install
 
-      - name: Check project
-        run: npm run check
+      #- name: Check project
+      #  run: npm run check
 
       - name: Build project
         run: |
