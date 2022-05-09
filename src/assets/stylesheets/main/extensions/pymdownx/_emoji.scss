@@ -30,12 +30,12 @@
   // Emoji and icon container
   :is(.emojione, .twemoji, .gemoji) {
     display: inline-flex;
-    height: px2em(18px);
+    height: px2em(14px);
     vertical-align: text-top;
 
     // Icon - inlined via mkdocs-material-extensions
     svg {
-      width: px2em(18px);
+      width: px2em(14px);
       max-height: 100%;
       fill: currentcolor;
     }

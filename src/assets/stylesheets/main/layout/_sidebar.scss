@@ -27,10 +27,10 @@
 // Sidebar
 .md-sidebar {
   position: sticky;
-  top: px2rem(48px);
+  top: px2rem(64px);
   flex-shrink: 0;
   align-self: flex-start;
-  width: px2rem(242px);
+  width: px2rem(256px);
   padding: px2rem(24px) 0;
 
   // [print]: Hide sidebar
@@ -45,10 +45,10 @@
     &--primary {
       position: fixed;
       top: 0;
-      inset-inline-start: px2rem(-242px);
+      inset-inline-start: px2rem(-256px);
       z-index: 5;
       display: block;
-      width: px2rem(242px);
+      width: px2rem(256px);
       height: 100%;
       background-color: var(--md-default-bg-color);
       transform: translateX(0);
@@ -59,11 +59,11 @@
       // Show sidebar when drawer is active
       [data-md-toggle="drawer"]:checked ~ .md-container & {
         box-shadow: var(--md-shadow-z3);
-        transform: translateX(px2rem(242px));
+        transform: translateX(px2rem(256px));
 
         // Adjust for right-to-left languages
         [dir="rtl"] & {
-          transform: translateX(px2rem(-242px));
+          transform: translateX(px2rem(-256px));
         }
       }
 

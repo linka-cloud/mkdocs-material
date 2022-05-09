@@ -31,8 +31,9 @@
   top: 0;
   inset-inline: 0;
   z-index: 4;
-  color: var(--md-primary-bg-color);
-  background-color: var(--md-primary-fg-color);
+
+  background-color: var(--md-default-bg-color);
+  color: var(--md-primary-fg-color);
   // Hack: reduce jitter by adding a transparent box shadow of the same size
   // so the size of the layer doesn't change during animation
   box-shadow:
@@ -46,12 +47,8 @@
 
   // Header in shadow state, i.e. shadow is visible
   &[data-md-state="shadow"] {
-    box-shadow:
-      0 0           px2rem(4px) rgba(0, 0, 0, 0.1),
-      0 px2rem(4px) px2rem(8px) rgba(0, 0, 0, 0.2);
-    transition:
-      transform  250ms cubic-bezier(0.1, 0.7, 0.1, 1),
-      box-shadow 250ms;
+    box-shadow: 0 0 0.1rem rgb(0 0 0 / 10%), 0 0.1rem 0.1rem rgb(0 0 0 / 10%);
+    transition: transform .25s cubic-bezier(.1,.7,.1,1),box-shadow .25s;
   }
 
   // Header in hidden state, i.e. moved out of sight
@@ -179,11 +176,11 @@
   // Header title
   &__title {
     flex-grow: 1;
-    height: px2rem(48px);
+    height: px2rem(64px);
     margin-inline-end: px2rem(8px);
     margin-inline-start: px2rem(20px);
     font-size: px2rem(18px);
-    line-height: px2rem(48px);
+    line-height: px2rem(64px);
 
     // Header title in active state, i.e. page title is visible
     &[data-md-state="active"] .md-header__topic {

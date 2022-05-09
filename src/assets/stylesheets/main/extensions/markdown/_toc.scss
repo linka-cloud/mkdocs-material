@@ -60,7 +60,7 @@
 
   // Adjust scroll margin for all elements with `id` attributes
   :target {
-    --md-scroll-margin: #{px2rem(48px + 24px)};
+    --md-scroll-margin: #{px2rem(64px + 24px)};
     --md-scroll-offset: #{px2rem(0px)};
     // Scroll margin is finally ready for prime time - before, we used a hack
     // for anchor correction based on pseudo elements but those times are gone.

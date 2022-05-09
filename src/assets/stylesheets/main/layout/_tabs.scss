@@ -59,7 +59,7 @@
   // Navigation tabs item
   &__item {
     display: inline-block;
-    height: px2rem(48px);
+    height: px2rem(64px);
     padding-inline: px2rem(12px);
   }
 
@@ -67,7 +67,7 @@
   // line height, but this would imply more repaints when scrolling
   &__link {
     display: block;
-    margin-top: px2rem(16px);
+    margin-top: px2rem(24px);
     font-size: px2rem(14px);
     outline-color: var(--md-accent-fg-color);
     outline-offset: px2rem(4px);

@@ -50,11 +50,12 @@
     // a tiny factor seems to get rid of the ellipsis and renders the text as
     // it should - see https://bit.ly/2ZUCXQ8
     flex-grow: 0.01;
-    padding-top: px2rem(28px);
-    padding-bottom: px2rem(8px);
     overflow: hidden;
     outline-color: var(--md-accent-fg-color);
     transition: opacity 250ms;
+    background-color: white;
+    margin: px2rem(32px);
+    padding: px2rem(32px);
 
     // Footer link on focus/hover
     &:is(:focus, :hover) {
@@ -95,10 +96,10 @@
   &__title {
     position: relative;
     flex-grow: 1;
-    max-width: calc(100% - #{px2rem(48px)});
+    max-width: calc(100% - #{px2rem(64px)});
     padding: 0 px2rem(20px);
     font-size: px2rem(18px);
-    line-height: px2rem(48px);
+    line-height: px2rem(64px);
   }
 
   // Footer link button
@@ -120,7 +121,7 @@
 
 // Footer metadata
 .md-footer-meta {
-  background-color: var(--md-footer-bg-color--dark);
+  background-color: var(--md-footer-bg-color);
 
   // Footer metadata wrapper
   &__inner {
@@ -148,7 +149,7 @@
   width: 100%;
   margin: auto px2rem(12px);
   padding: px2rem(8px) 0;
-  color: var(--md-footer-fg-color--lighter);
+  color: var(--md-footer-fg-color);
   font-size: px2rem(12.8px);
 
   // [tablet portrait +]: Show copyright and social links in one line

@@ -24,7 +24,7 @@
 // Keyframes
 // ----------------------------------------------------------------------------
 
-// See https://github.com/squidfunk/mkdocs-material/issues/2429
+// See https://github.com/squidfunk/mkdocs-material/issues/2569
 @keyframes hoverfix {
   0% {
     pointer-events: none;
@@ -45,7 +45,7 @@
 // Version selection
 .md-version {
   flex-shrink: 0;
-  height: px2rem(48px);
+  height: px2rem(64px);
   font-size: px2rem(16px);
 
   // Current selection
@@ -120,7 +120,7 @@
 
   // Version selection item
   &__item {
-    line-height: px2rem(36px);
+    line-height: px2rem(64px);
   }
 
   // Version selection link
