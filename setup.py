@@ -38,7 +38,7 @@ with open("README.md", encoding = "utf-8") as f:
 
 # Package description
 setup(
-    name = "mkdocs-material",
+    name = "mkdocs-linka-cloud",
     version = package["version"],
     url = "https://linka.cloud",
     license = package["license"],
