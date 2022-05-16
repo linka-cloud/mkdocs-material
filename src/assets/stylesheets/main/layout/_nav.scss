@@ -46,8 +46,8 @@
     font-weight: 700;
     text-overflow: ellipsis;
 
-    background-color: var(--md-default-bg-color);
-    color: var(--md-primary-fg-color);
+    background-color: var(--md-default-bg-color) !important;
+    color: var(--md-primary-fg-color) !important;
 
     // Navigaton button
     .md-nav__button {
